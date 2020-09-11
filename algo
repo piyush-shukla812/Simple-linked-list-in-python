@@ -1,0 +1,20 @@
+class Linked_list_Node:
+    def __init__(self, value, Nextnode=None):
+        self.value = value
+        self.Nextnode = Nextnode
+
+
+node1 = Linked_list_Node("30")
+node2 = Linked_list_Node("50")
+node3 = Linked_list_Node("100")
+
+currentnode = node1
+node1.Nextnode = node2
+node2.Nextnode = node3
+
+while True:
+    print(currentnode.value, "=>")
+    if currentnode.Nextnode is None:
+        print('None')
+        break
+    currentnode = currentnode.Nextnode
